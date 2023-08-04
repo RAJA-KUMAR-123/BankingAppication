@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Transfer Money</title>
+<style>
+   body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       background-size: cover;
+       background-position: center;
+   }
+
+   .container {
+       max-width: 400px;
+       padding: 30px;
+       background-color: rgba(255, 255, 255, 0.9);
+       border-radius: 10px;
+       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+       text-align: center;
+   }
+
+   form {
+       margin-top: 20px;
+   }
+
+   label {
+       display: block;
+       font-weight: bold;
+       margin-bottom: 5px;
+   }
+
+   input[type="text"], input[type="password"] {
+       padding: 8px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       width: 100%;
+       margin-top: 5px;
+   }
+
+   input[type="submit"] {
+       background-color: #3366cc;
+       color: #fff;
+       border: none;
+       padding: 10px 20px;
+       border-radius: 4px;
+       font-weight: bold;
+       cursor: pointer;
+       transition: background-color 0.4s ease;
+   }
+
+   input[type="submit"]:hover {
+       background-color: #005580;
+   }
+</style>
+</head>
+<body>
+<div class="container">
+<form action="TransferController" method="post">
+<label for="cust_id">Customer ID:</label>
+<input type="text" id="cust_id" name="cust_id">
+<label for="bank_name">Bank Name:</label>
+<input type="text" id="bank_name" name="bank_name">
+<label for="IFSC">IFSC:</label>
+<input type="text" id="IFSC" name="IFSC">
+<label for="sender_accno">Senders Accno:</label>
+<input type="text" id="sender_accno" name="sender_accno">
+<label for="receiver_IFSC">Receivers IFSC:</label>
+<input type="text" id="receiver_IFSC" name="receiver_IFSC">
+<label for="receiver_accno">Receivers Accno:</label>
+<input type="text" id="receiver_accno" name="receiver_accno">
+<label for="amount">Amount:</label>
+<input type="text" id="amount" name="amount">
+<label for="pin">Pin:</label>
+<input type="password" id="pin" name="pin">
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
